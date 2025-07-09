@@ -1,6 +1,6 @@
 import { IsString } from "class-validator"
 
-export class CreateAppealDto {
+export class CreatePlaceDto {
     @IsString()
     topic: string
     @IsString()

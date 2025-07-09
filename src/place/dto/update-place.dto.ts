@@ -1,8 +1,8 @@
 import { PartialType } from '@nestjs/mapped-types';
-import { CreateAppealDto } from './create-appeal.dto';
+import { CreatePlaceDto } from './create-place.dto';
 import { IsNumber, IsString } from 'class-validator';
 
-export class UpdateAppealDto extends PartialType(CreateAppealDto) {
+export class UpdatePlaceDto extends PartialType(CreatePlaceDto) {
     @IsNumber()
     id: number
     @IsString()

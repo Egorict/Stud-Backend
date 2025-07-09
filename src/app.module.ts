@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
-
-import { AppealModule } from './appeal/appeal.module';
+import { PlaceModule } from './place/place.module';
 
 @Module({
-  imports: [AppealModule],
+  imports: [PlaceModule],
   controllers: [],
   providers: [],
 })
