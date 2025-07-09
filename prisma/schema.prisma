@@ -8,9 +8,9 @@ datasource db {
 }
 
 model Place {
-  id               String @id @unique
+  id               Int    @id @default(autoincrement()) @unique
   distance         Float
   name             String
   discount         Float
-  duscountDuration Float
+  discountDuration Float
 }

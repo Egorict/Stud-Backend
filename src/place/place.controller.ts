@@ -8,12 +8,17 @@ export class PlaceController {
   constructor(private readonly placeService: PlaceService) {}
 
   @Post("/create")
-  create() {
-    return this.placeService.create();
+  create(@Body() dto: CreatePlaceDto) {
+    return this.placeService.create(dto);
   }
 
   @Get("/getAll")
-  get() {
+  getAll() {
     return this.placeService.findAll();
+  }
+
+  @Get("/:id")
+  get(@Param("id") id: string) {
+    return this.placeService.find(+id);
   }
 }

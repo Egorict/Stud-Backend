@@ -9,14 +9,24 @@ import { Prisma } from '@prisma/client';
 export class PlaceService {
   constructor(private prisma: PrismaService) {}
 
-  create() {
+  create(dto: CreatePlaceDto) {
     var today = new Date();
     return this.prisma.place.create({
       data: 
-      {discount: 1, distance: 1, duscountDuration: 1, name: "!!", id: "1"}})
+      {
+        discount: dto.discount,
+        distance: dto.distance, 
+        discountDuration: dto.discountDuration, 
+        name: dto.name
+      }
+    })
   }
 
   findAll() {
     return this.prisma.place.findMany()
+  } 
+
+  find(id: number) {
+    return this.prisma.place.findUnique({where: {id: id}})
   } 
 }
