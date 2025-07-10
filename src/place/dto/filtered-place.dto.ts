@@ -1,20 +1,17 @@
 import { IsNumber, IsString } from "class-validator"
 
-export class CreatePlaceDto {
+export class FilteredPlaceDto {
     @IsNumber()
-    id    
+    id?    
     @IsNumber()         
-    distance   
+    minDiscount?   
     @IsString()   
-    name    
+    name?    
     @IsNumber()          
-    discount       
+    MinRating?       
     @IsNumber()     
-    discountDuration 
-    
-    sprite
+    MinDiscountDuration?     
     @IsNumber()
-    rating
+    MaxDistance?
 }
-
 

@@ -1,6 +1,6 @@
 import { IsNumber, IsString } from "class-validator"
 
-export class CreatePlaceDto {
+export class CreateUnmoderatedPlaceDto {
     @IsNumber()
     id    
     @IsNumber()         
@@ -11,7 +11,7 @@ export class CreatePlaceDto {
     discount       
     @IsNumber()     
     discountDuration 
-    
+  
     sprite
     @IsNumber()
     rating
